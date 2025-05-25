@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>618手机购买指南 - AI智能建议版</title>
+    <title>618手机购买指南 - 精明消费版</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <style>
@@ -24,56 +24,13 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(255, 153, 0, 0.2);
         }
-        /* Modal Styles */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.75);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+        .warning-card {
+            background-color: #4a1a1f; /* Dark red for warnings */
+            border: 1px solid #c53030; /* Red border */
+            color: #fed7d7; /* Light red text */
         }
-        .modal-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        .modal-content {
-            background-color: #2C2C2C;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            width: 90%;
-            max-width: 500px;
-            color: #E0E0E0;
-            position: relative;
-        }
-        .modal-close-btn {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: none;
-            border: none;
-            color: #FF9900;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        .ai-button {
-            background-color: #FF9900;
-            color: #1B1B1B; /* Dark text for better contrast on orange */
-            font-weight: 600;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            transition: background-color 0.2s ease;
-            border: 1px solid #FF9900;
-        }
-        .ai-button:hover {
-            background-color: #E08A00; /* Slightly darker orange on hover */
+        .warning-card h3 {
+            color: #fbb6b6; /* Lighter red for heading */
         }
     </style>
 </head>
@@ -84,7 +41,7 @@
             <h1 class="text-3xl md:text-4xl font-extrabold text-center">
                 <span class="text-ph-white">618手机</span><span class="ph-orange">购买指南</span>
             </h1>
-            <p class="text-center text-neutral-400 text-sm md:text-base mt-1">精选机型，助你决策 (AI智能建议版)</p>
+            <p class="text-center text-neutral-400 text-sm md:text-base mt-1">精选机型，助你精明消费</p>
         </div>
     </header>
 
@@ -105,8 +62,7 @@
                             <li>支持存储扩展和耳机孔</li>
                             <li>综合性价比高，享vivo售后</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                     <div class="bg-ph-card p-6 rounded-lg ph-shadow transition-transform duration-300 card-hover">
                         <h3 class="text-2xl font-semibold text-ph-white mb-3">OPPO A5</h3>
                         <ul class="list-disc list-inside text-neutral-300 space-y-1 text-sm">
@@ -116,8 +72,7 @@
                             <li>IP66/68/69高防水等级</li>
                             <li>售后方便，适合送父母长辈</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                     <div class="bg-ph-card p-6 rounded-lg ph-shadow transition-transform duration-300 card-hover">
                         <h3 class="text-2xl font-semibold text-ph-white mb-3">真我Neo7x</h3>
                         <ul class="list-disc list-inside text-neutral-300 space-y-1 text-sm">
@@ -127,8 +82,7 @@
                             <li>IP66/68/69高防水等级</li>
                             <li>性能更强，但线下售后点较少</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                 </div>
             </section>
 
@@ -146,8 +100,7 @@
                             <li>高防水</li>
                             <li>性价比、性能、续航兼备</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                     <div class="bg-ph-card p-6 rounded-lg ph-shadow transition-transform duration-300 card-hover">
                         <h3 class="text-2xl font-semibold text-ph-white mb-3">iQOO Z10 Turbo</h3>
                         <ul class="list-disc list-inside text-neutral-300 space-y-1 text-sm">
@@ -156,8 +109,7 @@
                             <li><strong class="text-ph-orange">屏幕：</strong>1.5K 144Hz屏</li>
                             <li>性能、续航、屏幕优势，无IP68</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                     <div class="bg-ph-card p-6 rounded-lg ph-shadow transition-transform duration-300 card-hover">
                         <h3 class="text-2xl font-semibold text-ph-white mb-3">红米Turbo 4 Pro</h3>
                         <ul class="list-disc list-inside text-neutral-300 space-y-1 text-sm">
@@ -166,8 +118,7 @@
                             <li><strong class="text-ph-orange">屏幕：</strong>2K 120Hz屏</li>
                             <li>IP68，质感好，性能释放激进</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                     <div class="bg-ph-card p-6 rounded-lg ph-shadow transition-transform duration-300 card-hover">
                         <h3 class="text-2xl font-semibold text-ph-white mb-3">真我Neo7</h3>
                         <ul class="list-disc list-inside text-neutral-300 space-y-1 text-sm">
@@ -177,8 +128,7 @@
                             <li>IP68/69，极致性能、大电池、防水</li>
                             <li>但塑料机身和短焦指纹</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                 </div>
             </section>
 
@@ -194,8 +144,7 @@
                             <li>调教好，质感突出</li>
                             <li>Ace 5 Pro可能是最便宜的骁龙8至尊版</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                     <div class="bg-ph-card p-6 rounded-lg ph-shadow transition-transform duration-300 card-hover">
                         <h3 class="text-2xl font-semibold text-ph-white mb-3">红米K80 / K80 Pro</h3>
                         <ul class="list-disc list-inside text-neutral-300 space-y-1 text-sm">
@@ -203,8 +152,7 @@
                             <li>硬件堆料足，有2K屏，IP68，超声波指纹</li>
                             <li>K80 Pro影像堆料更足</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                     <div class="bg-ph-card p-6 rounded-lg ph-shadow transition-transform duration-300 card-hover">
                         <h3 class="text-2xl font-semibold text-ph-white mb-3">vivo S20 Pro</h3>
                         <ul class="list-disc list-inside text-neutral-300 space-y-1 text-sm">
@@ -212,8 +160,7 @@
                             <li>影像配置与X200同款</li>
                             <li>轻薄颜值高，性能过关，适合女生</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                     <div class="bg-ph-card p-6 rounded-lg ph-shadow transition-transform duration-300 card-hover">
                         <h3 class="text-2xl font-semibold text-ph-white mb-3">真我GT7</h3>
                         <ul class="list-disc list-inside text-neutral-300 space-y-1 text-sm">
@@ -221,8 +168,7 @@
                             <li>硬件性价比高，可能是最便宜的9400+机型</li>
                             <li>配置均衡，三摄齐全，续航持久</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                 </div>
             </section>
 
@@ -239,8 +185,7 @@
                             <li>同代旗舰中价格优势大</li>
                             <li>X8s+性能更强，X8s是小屏加强款</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                     <div class="bg-ph-card p-6 rounded-lg ph-shadow transition-transform duration-300 card-hover">
                         <h3 class="text-2xl font-semibold text-ph-white mb-3">vivo X200</h3>
                         <ul class="list-disc list-inside text-neutral-300 space-y-1 text-sm">
@@ -248,8 +193,7 @@
                             <li>轻薄，影像</li>
                             <li>喜欢蓝厂算法可入手，拍照风格有特点</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                     <div class="bg-ph-card p-6 rounded-lg ph-shadow transition-transform duration-300 card-hover">
                         <h3 class="text-2xl font-semibold text-ph-white mb-3">iQOO 13</h3>
                         <ul class="list-disc list-inside text-neutral-300 space-y-1 text-sm">
@@ -257,8 +201,7 @@
                             <li>iQOO当家性能旗舰，堆料满，调校猛，散热好</li>
                             <li>适合打游戏用户</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                     <div class="bg-ph-card p-6 rounded-lg ph-shadow transition-transform duration-300 card-hover">
                         <h3 class="text-2xl font-semibold text-ph-white mb-3">真我GT7 Pro</h3>
                         <ul class="list-disc list-inside text-neutral-300 space-y-1 text-sm">
@@ -267,8 +210,7 @@
                             <li>数据续航第一，外放音质好</li>
                         </ul>
                          <p class="mt-2 text-xs text-neutral-500">(备注：原文视频中此价位段提及的是真我GT7 Pro)</p>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                     <div class="bg-ph-card p-6 rounded-lg ph-shadow transition-transform duration-300 card-hover">
                         <h3 class="text-2xl font-semibold text-ph-white mb-3">一加13</h3>
                         <ul class="list-disc list-inside text-neutral-300 space-y-1 text-sm">
@@ -276,8 +218,7 @@
                             <li>一加旗舰，各方面十分水桶</li>
                             <li>没啥明显短板，综合实力强</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                 </div>
             </section>
 
@@ -294,8 +235,7 @@
                             <li>Pro版本综合影像最强</li>
                             <li>Pro mini是小屏机里最打影像的一台</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
                     <div class="bg-ph-card p-6 rounded-lg ph-shadow transition-transform duration-300 card-hover">
                         <h3 class="text-2xl font-semibold text-ph-white mb-3">红魔10 Pro / Pro+</h3>
                         <ul class="list-disc list-inside text-neutral-300 space-y-1 text-sm">
@@ -304,8 +244,25 @@
                             <li>适合极致游戏用户</li>
                             <li>Pro+电池更大充电更快</li>
                         </ul>
-                        <button class="ai-button mt-4 w-full generate-advice-btn">✨ AI 购买建议</button>
-                    </div>
+                        </div>
+                </div>
+            </section>
+
+            <section id="consumer-advice" class="mt-12 space-y-8">
+                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-red-500 text-red-400">
+                    <span class="ph-orange">⚠️</span> 精明消费提示
+                </h2>
+                <div class="warning-card p-6 rounded-lg ph-shadow">
+                    <h3 class="text-xl font-semibold mb-3">关于华为手机</h3>
+                    <p>目前阶段，综合考虑产品竞争力、价格及其他因素，不建议购买任何华为手机。请谨慎评估。</p>
+                </div>
+                <div class="warning-card p-6 rounded-lg ph-shadow">
+                    <h3 class="text-xl font-semibold mb-3">警惕高溢价“自研”</h3>
+                    <p>对于部分品牌过度鼓吹“自研”、“自主”等概念，并因此产生较高产品溢价的情况，请消费者保持清醒，理性判断其真实价值，避免为不必要的营销成本买单。</p>
+                </div>
+                <div class="warning-card p-6 rounded-lg ph-shadow">
+                    <h3 class="text-xl font-semibold mb-3">高端旗舰影像需求评估</h3>
+                    <p>高端旗舰手机在影像方面堆料较多，成本也相应较高。如果影像并非您的核心需求或主要生产力工具（如专业摄影、视频创作等），购买此类机型可能造成不必要的浪费。请根据实际需求选择，避免盲目追求顶级配置。</p>
                 </div>
             </section>
 
@@ -332,111 +289,24 @@
             </div>
     </main>
 
-    <div id="aiAdviceModal" class="modal-overlay">
-        <div class="modal-content">
-            <button id="modalCloseBtn" class="modal-close-btn">&times;</button>
-            <h3 id="modalTitle" class="text-2xl font-semibold text-ph-orange mb-4">AI 购买建议</h3>
-            <div id="modalBody" class="text-neutral-300">
-                <p>正在生成建议，请稍候...</p>
-            </div>
-        </div>
-    </div>
-
     <footer class="text-center py-8 mt-12 border-t border-neutral-700">
         <p class="text-neutral-500 text-sm">&copy; 2025 618手机购买指南. 内容仅供参考，请理性消费。</p>
         <p class="text-neutral-600 text-xs mt-1">UI灵感来源请求已收到并体现在配色与布局风格上。</p>
     </footer>
 
     <script>
+        // All AI related JavaScript has been removed.
+        // You can add other non-AI related JavaScript here if needed.
         document.addEventListener('DOMContentLoaded', () => {
-            const adviceButtons = document.querySelectorAll('.generate-advice-btn');
-            const modal = document.getElementById('aiAdviceModal');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalBody = document.getElementById('modalBody');
-            const modalCloseBtn = document.getElementById('modalCloseBtn');
-
-            // Function to open the modal
-            function openModal(title, content) {
-                modalTitle.textContent = title;
-                modalBody.innerHTML = content; // Use innerHTML to allow for simple p tags
-                modal.classList.add('active');
-            }
-
-            // Function to close the modal
-            function closeModal() {
-                modal.classList.remove('active');
-            }
-
-            // Event listener for closing the modal
-            modalCloseBtn.addEventListener('click', closeModal);
-            modal.addEventListener('click', (event) => {
-                // Close modal if clicked outside the content area
-                if (event.target === modal) {
-                    closeModal();
-                }
-            });
-
-            // Event listeners for each "AI 购买建议" button
-            adviceButtons.forEach(button => {
-                button.addEventListener('click', async () => {
-                    const card = button.closest('.bg-ph-card');
-                    const phoneNameElement = card.querySelector('h3');
-                    const phoneFeaturesList = card.querySelectorAll('ul li');
-
-                    if (!phoneNameElement || phoneFeaturesList.length === 0) {
-                        openModal('错误', '<p>无法获取手机信息。</p>');
-                        return;
-                    }
-
-                    const phoneName = phoneNameElement.textContent.trim();
-                    // Now directly use the features as listed, without adding notes about prediction
-                    let featuresText = Array.from(phoneFeaturesList).map(li => li.textContent.trim()).join('；');
-                    
-                    // Clean up potential asterisk notes from features if any remain from other contexts
-                    featuresText = featuresText.replace(/\*.*$/gm, '').trim();
-
-
-                    openModal(`AI 为 ${phoneName} 生成的建议`, '<p class="animate-pulse">正在努力思考并生成建议，请稍候...</p>');
-
-                    // Construct the prompt for Gemini API
-                    const prompt = `这是一部名为 "${phoneName}" 的手机。其主要特点和描述是：“${featuresText}”。请根据这些信息，为正在考虑购买这款手机的用户提供一个简洁明了的购买建议。建议应包括2-3句话，突出其核心优势，并指出它最适合哪一类用户。请直接给出建议内容。`;
-                    
-                    let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
-                    const payload = { contents: chatHistory };
-                    const apiKey = ""; // API key will be injected by the environment
-                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-                    try {
-                        const response = await fetch(apiUrl, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(payload)
-                        });
-
-                        if (!response.ok) {
-                            const errorData = await response.json();
-                            console.error('Gemini API Error:', errorData);
-                            openModal(`AI 为 ${phoneName} 生成建议失败`, `<p>抱歉，AI建议生成失败。错误信息：${errorData?.error?.message || response.statusText}</p>`);
-                            return;
-                        }
-
-                        const result = await response.json();
-
-                        if (result.candidates && result.candidates.length > 0 &&
-                            result.candidates[0].content && result.candidates[0].content.parts &&
-                            result.candidates[0].content.parts.length > 0) {
-                            const adviceText = result.candidates[0].content.parts[0].text;
-                            openModal(`AI 为 ${phoneName} 生成的建议`, `<p>${adviceText.split('\n').join('<br>')}</p>`);
-                        } else {
-                            console.error('Unexpected Gemini API response structure:', result);
-                            openModal(`AI 为 ${phoneName} 生成建议失败`, '<p>抱歉，AI返回的建议内容格式不正确，请稍后再试。</p>');
-                        }
-                    } catch (error) {
-                        console.error('Fetch error:', error);
-                        openModal(`AI 为 ${phoneName} 生成建议失败`, `<p>网络请求失败或发生未知错误，请检查您的网络连接并稍后再试。错误: ${error.message}</p>`);
-                    }
-                });
-            });
+            // Example: Smooth scroll for anchor links if you add any
+            // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            //     anchor.addEventListener('click', function (e) {
+            //         e.preventDefault();
+            //         document.querySelector(this.getAttribute('href')).scrollIntoView({
+            //             behavior: 'smooth'
+            //         });
+            //     });
+            // });
         });
     </script>
 
